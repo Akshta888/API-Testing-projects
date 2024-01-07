@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <title>src.test.java.Features.RetryMech</title>  
+  </head>
+  <body>   
+    <div id="root-container">
+      <div id="leftnav">
+                
+        <div>
+  <div class="nav-logo">
+    <a href="karate-summary.html">
+      <img src="karate-logo.svg" alt="Karate"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">0</div>
+      <div id="nav-fail" class="bg-danger">1</div>
+    </div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>         
+  <div id="nav-date">
+    <div>2024-01-08 03:28:33 AM</div>
+  </div>        
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item failed">
+            <a href="#[1:3]"><span>[1:3]</span> <span>retry</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">src/test/java/Features/RetryMech.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Retry mechanism</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1:3]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1:3]</span>
+                <span class="scenario-name">retry</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>17093</span>
+            </div>
+          </div>
+          
+          <div><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment">#	* configure retry = {count: 3 , interval: 5000}</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref passed">5</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &#39;https://gorest.co.in/public/v2/users/5899657&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">3</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref passed">6</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>retry until responseStatus == 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.7">
+      <div class="step-ref failed">7</div>
+      
+      <div class="step-cell failed">
+        <span>Then</span>&nbsp;<span>method get</span>
+      </div>
+    </div>
+    <div class="time-cell failed">17090</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.7">03:28:17.659 request:
+1 &gt; GET https://gorest.co.in/public/v2/users/5899657
+1 &gt; Host: gorest.co.in
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_211)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+03:28:18.561 response time in milliseconds: 897
+1 &lt; 404
+1 &lt; Date: Sun, 07 Jan 2024 16:24:10 GMT
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Content-Length: 32
+1 &lt; Connection: keep-alive
+1 &lt; Cache-Control: no-cache
+1 &lt; referrer-policy: strict-origin-when-cross-origin
+1 &lt; vary: Origin
+1 &lt; x-content-type-options: nosniff
+1 &lt; x-download-options: noopen
+1 &lt; x-frame-options: SAMEORIGIN
+1 &lt; x-permitted-cross-domain-policies: none
+1 &lt; x-request-id: 68a62709-c905-4eff-9a01-f52d73717761
+1 &lt; x-runtime: 0.017391
+1 &lt; x-xss-protection: 0
+1 &lt; CF-Cache-Status: DYNAMIC
+1 &lt; Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=0mBVeT2V6%2FLDJSKhPtMyTW%2Bt7Kudxw9dJy74XEtXQN4fuU4dqQsow%2BzikwusI9NM3G%2FGZpU4PeoIHPF9EJm8t3wMGdqSs7lPM2bBQJirDkrEqEuA13F7J8vcXNl14Rg%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+1 &lt; NEL: {&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+1 &lt; Server: cloudflare
+1 &lt; CF-RAY: 841d8ca84ab64044-SIN
+1 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
+{&quot;message&quot;:&quot;Resource not found&quot;}
+
+03:28:18.703 retry condition not satisfied: responseStatus == 200
+03:28:18.704 sleeping before retry #1
+03:28:21.716 request:
+2 &gt; GET https://gorest.co.in/public/v2/users/5899657
+2 &gt; Host: gorest.co.in
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_211)
+2 &gt; Accept-Encoding: gzip,deflate
+
+
+03:28:22.387 response time in milliseconds: 671
+2 &lt; 404
+2 &lt; Date: Sun, 07 Jan 2024 16:24:14 GMT
+2 &lt; Content-Type: application/json; charset=utf-8
+2 &lt; Content-Length: 32
+2 &lt; Connection: keep-alive
+2 &lt; Cache-Control: no-cache
+2 &lt; referrer-policy: strict-origin-when-cross-origin
+2 &lt; vary: Origin
+2 &lt; x-content-type-options: nosniff
+2 &lt; x-download-options: noopen
+2 &lt; x-frame-options: SAMEORIGIN
+2 &lt; x-permitted-cross-domain-policies: none
+2 &lt; x-request-id: 608441d5-e851-4606-9651-eb94dbc12927
+2 &lt; x-runtime: 0.035400
+2 &lt; x-xss-protection: 0
+2 &lt; CF-Cache-Status: DYNAMIC
+2 &lt; Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=nniXRHB%2BwcA22bi0RSylU7APCdQN%2FyuDZ92XmNnVpK4a9H%2BDMRb1Wsrez%2B%2FI%2FQ1qEBh%2FoTcCqW237ZI2CfeXcFNus0xC1R8Q82ecXmf8n5XQUZL2zceP20PDTuyTUzo%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+2 &lt; NEL: {&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+2 &lt; Server: cloudflare
+2 &lt; CF-RAY: 841d8cc02e915fb4-SIN
+2 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
+{&quot;message&quot;:&quot;Resource not found&quot;}
+
+03:28:22.394 retry condition not satisfied: responseStatus == 200
+03:28:22.394 sleeping before retry #2
+03:28:25.413 request:
+3 &gt; GET https://gorest.co.in/public/v2/users/5899657
+3 &gt; Host: gorest.co.in
+3 &gt; Connection: Keep-Alive
+3 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_211)
+3 &gt; Accept-Encoding: gzip,deflate
+
+
+03:28:26.089 response time in milliseconds: 675
+3 &lt; 404
+3 &lt; Date: Sun, 07 Jan 2024 16:24:18 GMT
+3 &lt; Content-Type: application/json; charset=utf-8
+3 &lt; Content-Length: 32
+3 &lt; Connection: keep-alive
+3 &lt; Cache-Control: no-cache
+3 &lt; referrer-policy: strict-origin-when-cross-origin
+3 &lt; vary: Origin
+3 &lt; x-content-type-options: nosniff
+3 &lt; x-download-options: noopen
+3 &lt; x-frame-options: SAMEORIGIN
+3 &lt; x-permitted-cross-domain-policies: none
+3 &lt; x-request-id: 3401a50c-a16b-43d3-8fe1-84b55642ed66
+3 &lt; x-runtime: 0.054514
+3 &lt; x-xss-protection: 0
+3 &lt; CF-Cache-Status: DYNAMIC
+3 &lt; Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=q%2FRMMU3S1%2Fu7OyNlHnw6%2BaIUEo5SWLznKk9bAqZL95P2JY%2Bx95Rwsz4m7DKzobmBtU2CjzmIFQDQGbUm1uEOR0%2F%2F8vMh7qMbNTpnteSONl7BPzSxIUvjGrCR1TQeAm8%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+3 &lt; NEL: {&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+3 &lt; Server: cloudflare
+3 &lt; CF-RAY: 841d8cd749f3a071-SIN
+3 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
+{&quot;message&quot;:&quot;Resource not found&quot;}
+
+03:28:26.091 retry condition not satisfied: responseStatus == 200
+03:28:26.091 sleeping before retry #3
+03:28:29.104 request:
+4 &gt; GET https://gorest.co.in/public/v2/users/5899657
+4 &gt; Host: gorest.co.in
+4 &gt; Connection: Keep-Alive
+4 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_211)
+4 &gt; Accept-Encoding: gzip,deflate
+
+
+03:28:29.711 response time in milliseconds: 606
+4 &lt; 404
+4 &lt; Date: Sun, 07 Jan 2024 16:24:21 GMT
+4 &lt; Content-Type: application/json; charset=utf-8
+4 &lt; Content-Length: 32
+4 &lt; Connection: keep-alive
+4 &lt; Cache-Control: no-cache
+4 &lt; referrer-policy: strict-origin-when-cross-origin
+4 &lt; vary: Origin
+4 &lt; x-content-type-options: nosniff
+4 &lt; x-download-options: noopen
+4 &lt; x-frame-options: SAMEORIGIN
+4 &lt; x-permitted-cross-domain-policies: none
+4 &lt; x-request-id: b052d0ae-0afe-4f59-afbf-7083e85df101
+4 &lt; x-runtime: 0.074901
+4 &lt; x-xss-protection: 0
+4 &lt; CF-Cache-Status: DYNAMIC
+4 &lt; Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=1swjxLWk%2FOf5BRX5uW3aiykc7iTudmP9nqSf13cWB6nZ7Es1iPKGKfNsuAXlmpM51FRnPN9ijrbS2ORP46r0Pdzh6BWa5n8PDIDIFstKvndfCwOGWbeOjZLAhUGLOxo%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+4 &lt; NEL: {&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+4 &lt; Server: cloudflare
+4 &lt; CF-RAY: 841d8cee5e6049a8-SIN
+4 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
+{&quot;message&quot;:&quot;Resource not found&quot;}
+
+03:28:29.713 retry condition not satisfied: responseStatus == 200
+03:28:29.713 sleeping before retry #4
+03:28:32.721 request:
+5 &gt; GET https://gorest.co.in/public/v2/users/5899657
+5 &gt; Host: gorest.co.in
+5 &gt; Connection: Keep-Alive
+5 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_211)
+5 &gt; Accept-Encoding: gzip,deflate
+
+
+03:28:33.612 response time in milliseconds: 890
+5 &lt; 404
+5 &lt; Date: Sun, 07 Jan 2024 16:24:25 GMT
+5 &lt; Content-Type: application/json; charset=utf-8
+5 &lt; Content-Length: 32
+5 &lt; Connection: keep-alive
+5 &lt; Cache-Control: no-cache
+5 &lt; referrer-policy: strict-origin-when-cross-origin
+5 &lt; vary: Origin
+5 &lt; x-content-type-options: nosniff
+5 &lt; x-download-options: noopen
+5 &lt; x-frame-options: SAMEORIGIN
+5 &lt; x-permitted-cross-domain-policies: none
+5 &lt; x-request-id: 11e9b902-27c2-423f-b266-b6a923277e05
+5 &lt; x-runtime: 0.239546
+5 &lt; x-xss-protection: 0
+5 &lt; CF-Cache-Status: DYNAMIC
+5 &lt; Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=MMA8SrSlxmZuVTWCnBLHSVPbcJWvsTpAZduNemNYxtxgPmjdT9q5m%2B4ZLdTywl6jw2nUBvAiZs2bhqXORT1v2j2I3h47MCWY4EHEkLf1qibSoOj6Q4ess628sPWAjJU%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+5 &lt; NEL: {&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+5 &lt; Server: cloudflare
+5 &lt; CF-RAY: 841d8d04e8b18799-SIN
+5 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
+{&quot;message&quot;:&quot;Resource not found&quot;}
+
+03:28:33.617 retry condition not satisfied: responseStatus == 200
+03:28:33.618 src/test/java/Features/RetryMech.feature:7
+Then method get
+too many retry attempts: 5
+src/test/java/Features/RetryMech.feature:7
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.8">
+      <div class="step-ref skipped">8</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
