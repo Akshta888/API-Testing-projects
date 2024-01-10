@@ -10,7 +10,7 @@ public class RunnerTest {
 		
 		//return Karate.run("GetUser").relativeTo(getClass());
 	//	return Karate.run("classpath:Features/GetUser.feature");
-		return Karate.run("classpath:Features");
+		return Karate.run("classpath:Features").tags("@Regression").relativeTo(getClass());
 		
 	}
 
